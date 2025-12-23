@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/elish
+DEVICE_PATH := device/xiaomi/pipa
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -70,16 +70,13 @@ AB_OTA_PARTITIONS += \
     vendor_boot
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := elish,enuma
+TARGET_OTA_ASSERT_DEVICE := pipa
 
 # AVB
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
-
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 134217728
-#BOARD_RECOVERYIMAGE_PARTITION_SIZE := 134217728 # This is the maximum known partition size, but it can be higher, so we just omit it
-
 # Dynamic Partition
 BOARD_SUPER_PARTITION_SIZE := 9126805504
 BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
@@ -105,11 +102,9 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
 # Display
-#TARGET_SCREEN_DENSITY := 360
-#TARGET_SCREEN_HEIGHT := 2560
-#TARGET_SCREEN_WIDTH := 1600
-TW_X_OFFSET := 224
-TW_W_OFFSET := -448
+TARGET_SCREEN_DENSITY := 440
+TARGET_SCREEN_HEIGHT := 2880
+TARGET_SCREEN_WIDTH := 1800
 TW_FRAMERATE := 120
 
 # Crypto
@@ -156,9 +151,6 @@ TARGET_USES_LOGD := true
 
 # Haptics
 TW_NO_HAPTICS := true
-
-# Kernel modules
-TW_LOAD_VENDOR_MODULES := "exfat.ko"
 
 # Serialno
 TW_USE_SERIALNO_PROPERTY_FOR_DEVICE_ID := true
