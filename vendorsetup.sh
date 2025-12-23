@@ -1,4 +1,4 @@
-export TW_DEFAULT_LANGUAGE="en"
+export TW_DEFAULT_LANGUAGE="en_US"
 export LC_ALL="C"
 export ALLOW_MISSING_DEPENDENCIES=true
 echo -e "\x1b[96mpipa: Start adding OrangeFox Vars...\x1b[m"
