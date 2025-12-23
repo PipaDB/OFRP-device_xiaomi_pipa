@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := device/xiaomi/elish
+LOCAL_PATH := device/xiaomi/pipa
 
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
